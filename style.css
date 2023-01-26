@@ -1,0 +1,78 @@
+body {
+  background-color: cadetblue;
+}
+
+.container1 {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container2 {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.box1 {
+  width: 150px;
+  height: 50px;
+  background-color: burlywood;
+  margin: 15px;
+  border-radius: 5%;
+  border: darkblue solid;
+  text-align: center;
+}
+
+.box1:hover {
+  cursor: pointer;
+}
+
+.box2 {
+  width: 150px;
+  height: 50px;
+  background-color: burlywood;
+  margin: 15px;
+  border-radius: 5%;
+  border: darkblue solid;
+  text-align: center;
+}
+
+.box2:hover {
+  cursor: pointer;
+}
+.box3 {
+  width: 150px;
+  height: 50px;
+  background-color: burlywood;
+  margin: 15px;
+  border-radius: 5%;
+  border: darkblue solid;
+  text-align: center;
+}
+
+.box3:hover {
+  cursor: pointer;
+}
+
+.box4 {
+  width: 150px;
+  height: 50px;
+  background-color: burlywood;
+  margin: 15px;
+  border: darkblue solid;
+  border-radius: 5%;
+  text-align: center;
+}
+.box4:hover {
+  cursor: pointer;
+}
+.combate1 {
+  width: 10%;
+  margin-left: 25px;
+}
+
+.combate2 {
+  width: 10%;
+  margin-left: 25px;
+}
