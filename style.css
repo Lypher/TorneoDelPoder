@@ -3,6 +3,12 @@ body {
   background-size: cover;
 }
 
+@media only screen and (max-width: 1010px) {
+  body {
+    background-size: auto;
+  }
+}
+
 .container1 {
   padding-top: 2%;
   display: flex;
@@ -38,8 +44,9 @@ body {
 
 .combate1,
 .combate2 {
-  width: 10%;
+  width: 75px;
   margin-left: 55px;
+  border-radius: 5%;
 }
 .combateFinal {
   width: 10%;
@@ -91,4 +98,8 @@ header h1 {
 
 button:hover {
   cursor: pointer;
+}
+.transparent-text {
+  opacity: 0.5;
+  color: gray;
 }

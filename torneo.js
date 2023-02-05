@@ -299,7 +299,7 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon2} es el campeon del torneo!!</h3>`;
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon2} Campeon!</p></div>
