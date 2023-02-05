@@ -67,8 +67,13 @@ function simularCombate() {
     if (campeon1 === null || campeon2 === null) {
       alert("ingresa ambos participantes para iniciar pelea");
     } else {
-      alert(campeon1 + " se enfrentara a " + campeon2);
-      combateRandom1(campeon1, campeon2, 50, 50);
+      let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
+      cajaDeComentarios.innerHTML = `<h3>${campeon1} se enfrentará a ${campeon2}</h3>
+      <button id="continuar">continuar</button>`;
+      let botonContinuar = document.getElementById("continuar");
+      botonContinuar.addEventListener("click", () => {
+        combateRandom1(campeon1, campeon2, 50, 50);
+      });
     }
   });
   let botonCombate2 = document.getElementById("boton_combate_2");
@@ -78,13 +83,21 @@ function simularCombate() {
     if (campeon3 === null || campeon4 === null) {
       alert("ingresa ambos participantes para iniciar pelea");
     } else {
-      alert(campeon3 + " se enfrentara a " + campeon4);
-      combateRandom2(campeon3, campeon4, 50, 50);
+      let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
+      cajaDeComentarios.innerHTML = `<h3>${campeon3} se enfrentará a ${campeon4}</h3>
+      <button id="continuar">continuar</button>`;
+      let botonContinuar = document.getElementById("continuar");
+      botonContinuar.addEventListener("click", () => {
+        combateRandom2(campeon3, campeon4, 50, 50);
+      });
     }
   });
 }
 
 function combateRandom1(campeon1, campeon2, vida1, vida2) {
+  let borrarBoton = document.getElementById("container1");
+  borrarBoton.innerHTML = `<div class="box1" id="box1"><p>${campeon1}</p></div>
+  <div class="box2" id="box2"><p>${campeon2}</p></div>`;
   let situacion = Math.floor(Math.random() * 2) + 1;
   let ataque = Math.floor(Math.random() * 11);
   let lugarDelCuerpo = Math.floor(Math.random() * 11);
@@ -103,8 +116,7 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>
-      <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container1");
           cajaABorrar.innerHTML = `<div class="box1" id="box1"><p> ${campeon1} </p></div>`;
           rondaFinal += 1;
@@ -132,8 +144,7 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! avanza a la siguiente ronda</h3>
-          <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container1");
           cajaABorrar.innerHTML = `<div class="container1" id="container1">
           <div class="box2" id="box2"><p> ${campeon2} </p></div>
@@ -152,6 +163,9 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
 }
 
 function combateRandom2(campeon1, campeon2, vida1, vida2) {
+  let borrarBoton = document.getElementById("container2");
+  borrarBoton.innerHTML = `<div class="box3" id="box3"><p>${campeon1}</p></div>
+  <div class="box4" id="box4"><p>${campeon2}</p></div>`;
   let situacion = Math.floor(Math.random() * 2) + 1;
   let ataque = Math.floor(Math.random() * 11);
   let lugarDelCuerpo = Math.floor(Math.random() * 11);
@@ -170,8 +184,7 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>
-      <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container2");
           cajaABorrar.innerHTML = `<div class="box3" id="box3"><p> ${campeon1} </p></div>`;
           rondaFinal += 1;
@@ -199,8 +212,7 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! avanza a la siguiente ronda</h3>
-          <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container2");
           cajaABorrar.innerHTML = `<div class="container2" id="container2">
       <div class="box3" id="box3"><p> ${campeon2} </p></div>
@@ -229,8 +241,13 @@ function combateFinal() {
       if (campeon1 === null || campeon2 === null) {
         alert("ingresa ambos participantes para iniciar pelea");
       } else {
-        alert(campeon1 + " se enfrentara a " + campeon2);
-        combateRandomFinal(campeon1, campeon2, 50, 50);
+        let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
+        cajaDeComentarios.innerHTML = `<h3>${campeon1} se enfrentará a ${campeon2}</h3>
+      <button id="continuar">continuar</button>`;
+        let botonContinuar = document.getElementById("continuar");
+        botonContinuar.addEventListener("click", () => {
+          combateRandomFinal(campeon1, campeon2, 50, 50);
+        });
       }
     });
   } else {
@@ -256,8 +273,7 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>
-      <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>`;
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon1} Campeon!</p></div>
@@ -283,8 +299,7 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>
-      <button id="continuar">continuar</button>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>`;
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon2} Campeon!</p></div>
