@@ -1,5 +1,6 @@
 body {
-  background-color: cadetblue;
+  background-image: url(./assets/ring.jpg);
+  background-size: cover;
 }
 
 .container1 {
@@ -14,65 +15,80 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+  cursor: pointer;
+}
+
+.box4,
+.box3,
+.box2,
 .box1 {
   width: 150px;
   height: 50px;
   background-color: burlywood;
   margin: 15px;
-  border-radius: 5%;
-  border: darkblue solid;
-  text-align: center;
-}
-
-.box1:hover {
-  cursor: pointer;
-}
-
-.box2 {
-  width: 150px;
-  height: 50px;
-  background-color: burlywood;
-  margin: 15px;
-  border-radius: 5%;
-  border: darkblue solid;
-  text-align: center;
-}
-
-.box2:hover {
-  cursor: pointer;
-}
-.box3 {
-  width: 150px;
-  height: 50px;
-  background-color: burlywood;
-  margin: 15px;
-  border-radius: 5%;
-  border: darkblue solid;
-  text-align: center;
-}
-
-.box3:hover {
-  cursor: pointer;
-}
-
-.box4 {
-  width: 150px;
-  height: 50px;
-  background-color: burlywood;
-  margin: 15px;
-  border: darkblue solid;
+  border: rgb(0, 0, 0) solid;
   border-radius: 5%;
   text-align: center;
 }
-.box4:hover {
-  cursor: pointer;
-}
-.combate1 {
-  width: 10%;
-  margin-left: 25px;
-}
 
+.combate1,
 .combate2 {
   width: 10%;
-  margin-left: 25px;
+  margin-left: 55px;
+}
+.combateFinal {
+  width: 10%;
+  margin-left: 55px;
+  margin-top: 2%;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  color: aliceblue;
+  text-shadow: black 3px 3px 3px;
+  font-size: 40px;
+}
+.containerGeneral {
+  margin-left: 20%;
+  background-color: rgb(3, 83, 83);
+  margin-right: 20%;
+  border: black double 10px;
+}
+.boxFinal {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(238, 224, 35);
+  margin: 15px;
+  border: rgb(0, 0, 0) solid;
+  border-radius: 5%;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: black 1px 1px;
+  font-size: 18px;
+  margin-left: 40%;
+}
+.cuadroDeDialogo {
+  margin-left: 20%;
+  color: rgb(3, 83, 83);
+  text-shadow: black 1px 1px 15px;
+  background-color: blanchedalmond;
+  margin-right: 20%;
+  text-align: center;
+}
+.cuadroDeDialogo button {
+  display: flex;
+  position: absolute;
+  margin-top: -41px;
+  margin-left: 60%;
+}
+
+button:hover {
+  cursor: pointer;
 }
