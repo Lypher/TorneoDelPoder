@@ -95,9 +95,6 @@ function simularCombate() {
 }
 
 function combateRandom1(campeon1, campeon2, vida1, vida2) {
-  let borrarBoton = document.getElementById("container1");
-  borrarBoton.innerHTML = `<div class="box1" id="box1"><p>${campeon1}</p></div>
-  <div class="box2" id="box2"><p>${campeon2}</p></div>`;
   let situacion = Math.floor(Math.random() * 2) + 1;
   let ataque = Math.floor(Math.random() * 11);
   let lugarDelCuerpo = Math.floor(Math.random() * 11);
@@ -113,6 +110,8 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       vida2 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon2} recibe ${daño} de daño,le quedan ${vida2} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra2");
+      barraDeVida.innerHTML = ` <div class="barra2" id="barra2">${vida2}/50</div>`;
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
@@ -141,6 +140,8 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       vida1 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon1} recibe ${daño} de daño,le quedan ${vida1} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra1");
+      barraDeVida.innerHTML = ` <div class="barra1" id="barra1">${vida1}/50</div>`;
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
@@ -163,9 +164,6 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
 }
 
 function combateRandom2(campeon1, campeon2, vida1, vida2) {
-  let borrarBoton = document.getElementById("container2");
-  borrarBoton.innerHTML = `<div class="box3" id="box3"><p>${campeon1}</p></div>
-  <div class="box4" id="box4"><p>${campeon2}</p></div>`;
   let situacion = Math.floor(Math.random() * 2) + 1;
   let ataque = Math.floor(Math.random() * 11);
   let lugarDelCuerpo = Math.floor(Math.random() * 11);
@@ -242,7 +240,8 @@ function combateFinal() {
         alert("ingresa ambos participantes para iniciar pelea");
       } else {
         let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
-        cajaDeComentarios.innerHTML = `<h3>${campeon1} se enfrentará a ${campeon2}</h3>
+        cajaDeComentarios.innerHTML = `<h3>${campeon1} se enfrentará a
+      ${campeon2}</h3>
       <button id="continuar">continuar</button>`;
         let botonContinuar = document.getElementById("continuar");
         botonContinuar.addEventListener("click", () => {
@@ -299,7 +298,7 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon2} es el campeon del torneo!!</h3>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>`;
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon2} Campeon!</p></div>

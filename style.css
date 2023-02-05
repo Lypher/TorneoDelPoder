@@ -36,22 +36,19 @@ body {
   width: 150px;
   height: 50px;
   background-color: burlywood;
-  margin: 15px;
+  margin: 10px auto;
   border: rgb(0, 0, 0) solid;
   border-radius: 5%;
   text-align: center;
 }
 
 .combate1,
-.combate2 {
+.combate2,
+.combateFinal {
   width: 75px;
   margin-left: 55px;
   border-radius: 5%;
-}
-.combateFinal {
-  width: 10%;
-  margin-left: 55px;
-  margin-top: 2%;
+  margin: 10px auto;
 }
 
 header {
@@ -72,14 +69,13 @@ header h1 {
   width: 150px;
   height: 50px;
   background-color: rgb(238, 224, 35);
-  margin: 15px;
+  margin: 10px auto;
   border: rgb(0, 0, 0) solid;
   border-radius: 5%;
   text-align: center;
   color: aliceblue;
   text-shadow: black 1px 1px;
   font-size: 18px;
-  margin-left: 40%;
 }
 .cuadroDeDialogo {
   margin-left: 20%;
@@ -102,4 +98,15 @@ button:hover {
 .transparent-text {
   opacity: 0.5;
   color: gray;
+}
+.barra1,
+.barra2 {
+  width: 150px;
+  height: 30px;
+  background-color: green;
+  margin: 0 auto;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: black;
+  border-top: solid black;
 }
