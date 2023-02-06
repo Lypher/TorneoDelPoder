@@ -240,22 +240,22 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       vida2 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon2} recibe ${daño} de daño,le quedan ${vida2} de vida</h3>
       <button id="continuar">continuar</button>`;
-      let barraDeVida = document.getElementById("contenedorBarra3");
-      barraDeVida.innerHTML = ` <div class="barra3" id="barra3">${vida2}/50</div>`;
+      let barraDeVida = document.getElementById("contenedorBarra4");
+      barraDeVida.innerHTML = ` <div class="barra4" id="barra4">${vida2}/50</div>`;
       if (vida2 <= 35 && vida2 > 20) {
-        let barraDeJugadorUno = document.querySelector(".barra3");
-        barraDeJugadorUno.classList.add("barra3_70");
-        barraDeJugadorUno.classList.remove("barra3");
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_70");
+        barraDeJugadorUno.classList.remove("barra4");
       }
       if (vida2 <= 20 && vida2 > 10) {
-        let barraDeJugadorUno = document.querySelector(".barra3");
-        barraDeJugadorUno.classList.add("barra3_50");
-        barraDeJugadorUno.classList.remove("barra3_70");
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_50");
+        barraDeJugadorUno.classList.remove("barra4_70");
       }
       if (vida2 <= 10) {
-        let barraDeJugadorUno = document.querySelector(".barra3");
-        barraDeJugadorUno.classList.add("barra3_25");
-        barraDeJugadorUno.classList.remove("barra3_50");
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_25");
+        barraDeJugadorUno.classList.remove("barra4_50");
       }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
@@ -286,22 +286,22 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       vida1 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon1} recibe ${daño} de daño,le quedan ${vida1} de vida</h3>
       <button id="continuar">continuar</button>`;
-      let barraDeVida = document.getElementById("contenedorBarra4");
-      barraDeVida.innerHTML = ` <div class="barra4" id="barra4">${vida1}/50</div>`;
+      let barraDeVida = document.getElementById("contenedorBarra3");
+      barraDeVida.innerHTML = ` <div class="barra3" id="barra3">${vida1}/50</div>`;
       if (vida1 <= 35 && vida1 > 20) {
-        let barraDeJugadorUno = document.querySelector(".barra4");
-        barraDeJugadorUno.classList.add("barra4_70");
-        barraDeJugadorUno.classList.remove("barra4");
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_70");
+        barraDeJugadorUno.classList.remove("barra3");
       }
       if (vida1 <= 20 && vida1 > 10) {
-        let barraDeJugadorUno = document.querySelector(".barra4");
-        barraDeJugadorUno.classList.add("barra4_50");
-        barraDeJugadorUno.classList.remove("barra4_70");
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_50");
+        barraDeJugadorUno.classList.remove("barra3_70");
       }
       if (vida1 <= 10) {
-        let barraDeJugadorUno = document.querySelector(".barra4");
-        barraDeJugadorUno.classList.add("barra4_25");
-        barraDeJugadorUno.classList.remove("barra4_50");
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_25");
+        barraDeJugadorUno.classList.remove("barra3_50");
       }
 
       let botonContinuar = document.getElementById("continuar");
@@ -391,6 +391,11 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon1} Campeon!</p></div>
+      <img
+      class="imagen"
+      src="./assets/b84ac2fa1bdd53274d992b96a0bd5347.gif"
+      alt=""
+    />
       `;
         }
         if (vida2 > 0) {
