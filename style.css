@@ -154,3 +154,10 @@ button:hover {
   text-shadow: black;
   border-top: solid black;
 }
+.imagen {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+}

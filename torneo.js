@@ -8,12 +8,26 @@ let partesDelCuerpo = [
   "la cara",
   "el brazo",
   "el estomago",
-  "las bolas",
+  "los testiculos",
   "los ojos",
   "la rodilla",
-  "el ano",
+  "el coxis",
   "el dedo chiquito del pie",
   "la mandibula",
+  "el codo",
+  "el hombro",
+  "el cuero cabelludo",
+  "el pelo",
+  "las nalgas",
+  "los dientes",
+  "la muela de juicio",
+  "la nariz",
+  "las costillas",
+  "la columna vertebral",
+  "los riñones",
+  "la nuca",
+  "la pantorrilla",
+  "el talon",
 ];
 let ataques = [
   "un tingazo",
@@ -27,6 +41,21 @@ let ataques = [
   "un ataque magico",
   "un kamehame ha",
   "un culaso",
+  "un rasengan",
+  "una patada de la gruya",
+  "una apuñalada",
+  "un katanaso",
+  "un tiro",
+  "una patada descendente",
+  "un panzaso",
+  "con una sarten",
+  "con un envase de cerveza",
+  "un arañazo",
+  "un pellizcon",
+  "un piedraso",
+  "con una boleadora",
+  "un empujon",
+  "un chancletazo",
 ];
 
 //Funciones:
@@ -96,8 +125,8 @@ function simularCombate() {
 
 function combateRandom1(campeon1, campeon2, vida1, vida2) {
   let situacion = Math.floor(Math.random() * 2) + 1;
-  let ataque = Math.floor(Math.random() * 11);
-  let lugarDelCuerpo = Math.floor(Math.random() * 11);
+  let ataque = Math.floor(Math.random() * 26);
+  let lugarDelCuerpo = Math.floor(Math.random() * 25);
   if (situacion === 1) {
     let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
     cajaDeComentarios.innerHTML = `<h3>${campeon1} le pega ${ataques[ataque]} en
@@ -197,8 +226,8 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
 
 function combateRandom2(campeon1, campeon2, vida1, vida2) {
   let situacion = Math.floor(Math.random() * 2) + 1;
-  let ataque = Math.floor(Math.random() * 11);
-  let lugarDelCuerpo = Math.floor(Math.random() * 11);
+  let ataque = Math.floor(Math.random() * 26);
+  let lugarDelCuerpo = Math.floor(Math.random() * 25);
   if (situacion === 1) {
     let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
     cajaDeComentarios.innerHTML = `<h3>${campeon1} le pega ${ataques[ataque]} en
@@ -324,8 +353,8 @@ function combateFinal() {
 
 function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
   let situacion = Math.floor(Math.random() * 2) + 1;
-  let ataque = Math.floor(Math.random() * 11);
-  let lugarDelCuerpo = Math.floor(Math.random() * 11);
+  let ataque = Math.floor(Math.random() * 26);
+  let lugarDelCuerpo = Math.floor(Math.random() * 25);
   if (situacion === 1) {
     let cajaDeComentarios = document.getElementById("cuadroDeDialogo");
     cajaDeComentarios.innerHTML = `<h3>${campeon1} le pega ${ataques[ataque]} en
@@ -405,6 +434,11 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon2} Campeon!</p></div>
+      <img
+      class="imagen"
+      src="./assets/b84ac2fa1bdd53274d992b96a0bd5347.gif"
+      alt=""
+    />
       `;
         }
         if (vida1 > 0) {
