@@ -100,10 +100,54 @@ button:hover {
   color: gray;
 }
 .barra1,
-.barra2 {
+.barra2,
+.barra3,
+.barra4 {
   width: 150px;
   height: 30px;
   background-color: green;
+  margin: 0 auto;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: black;
+  border-top: solid black;
+}
+
+.barra1_70,
+.barra2_70,
+.barra3_70,
+.barra4_70 {
+  width: 100px;
+  height: 30px;
+  background-color: orange;
+  margin: 0 auto;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: black;
+  border-top: solid black;
+}
+
+.barra1_50,
+.barra2_50,
+.barra3_50,
+.barra4_50 {
+  width: 50px;
+  height: 30px;
+  background-color: orangered;
+  margin: 0 auto;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: black;
+  border-top: solid black;
+}
+
+.barra1_25,
+.barra2_25,
+.barra3_25,
+.barra4_25 {
+  width: 30px;
+  height: 30px;
+  background-color: red;
   margin: 0 auto;
   text-align: center;
   color: aliceblue;

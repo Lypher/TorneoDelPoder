@@ -112,12 +112,28 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       <button id="continuar">continuar</button>`;
       let barraDeVida = document.getElementById("contenedorBarra2");
       barraDeVida.innerHTML = ` <div class="barra2" id="barra2">${vida2}/50</div>`;
+      if (vida2 <= 35 && vida2 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra2");
+        barraDeJugadorUno.classList.add("barra2_70");
+        barraDeJugadorUno.classList.remove("barra2");
+      }
+      if (vida2 <= 20 && vida2 >= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra2");
+        barraDeJugadorUno.classList.add("barra2_50");
+        barraDeJugadorUno.classList.remove("barra2_70");
+      }
+      if (vida2 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra2");
+        barraDeJugadorUno.classList.add("barra2_25");
+        barraDeJugadorUno.classList.remove("barra2_50");
+      }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
           cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container1");
-          cajaABorrar.innerHTML = `<div class="box1" id="box1"><p> ${campeon1} </p></div>`;
+          cajaABorrar.innerHTML = `<div class="box1" id="box1"><p> ${campeon1} </p></div>
+          <div class="contedorBarra1" id="contenedorBarra1"></div>`;
           rondaFinal += 1;
           sessionStorage.setItem("Finalista1", campeon1);
 
@@ -142,14 +158,30 @@ function combateRandom1(campeon1, campeon2, vida1, vida2) {
       <button id="continuar">continuar</button>`;
       let barraDeVida = document.getElementById("contenedorBarra1");
       barraDeVida.innerHTML = ` <div class="barra1" id="barra1">${vida1}/50</div>`;
+      if (vida1 <= 35 && vida1 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_70");
+        barraDeJugadorUno.classList.remove("barra1");
+      }
+      if (vida1 <= 20 && vida1 > 10) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_50");
+        barraDeJugadorUno.classList.remove("barra1_70");
+      }
+      if (vida1 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_25");
+        barraDeJugadorUno.classList.remove("barra1_50");
+      }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
           cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container1");
           cajaABorrar.innerHTML = `<div class="container1" id="container1">
-          <div class="box2" id="box2"><p> ${campeon2} </p></div>
-          </div>`;
+          <div class="box1" id="box1"><p> ${campeon2} </p></div>
+          </div>
+          <div class="contedorBarra1" id="contenedorBarra1"></div>`;
           rondaFinal += 1;
           sessionStorage.setItem("Finalista1", campeon2);
 
@@ -179,12 +211,30 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       vida2 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon2} recibe ${daño} de daño,le quedan ${vida2} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra3");
+      barraDeVida.innerHTML = ` <div class="barra3" id="barra3">${vida2}/50</div>`;
+      if (vida2 <= 35 && vida2 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_70");
+        barraDeJugadorUno.classList.remove("barra3");
+      }
+      if (vida2 <= 20 && vida2 > 10) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_50");
+        barraDeJugadorUno.classList.remove("barra3_70");
+      }
+      if (vida2 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_25");
+        barraDeJugadorUno.classList.remove("barra3_50");
+      }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
           cajaDeComentarios.innerHTML = `<h3>${campeon1} ha ganado el combate! avanza a la siguiente ronda</h3>`;
           let cajaABorrar = document.getElementById("container2");
-          cajaABorrar.innerHTML = `<div class="box3" id="box3"><p> ${campeon1} </p></div>`;
+          cajaABorrar.innerHTML = `<div class="box3" id="box3"><p> ${campeon1} </p></div>
+          <div class="contedorBarra3" id="contenedorBarra3"></div>`;
           rondaFinal += 1;
           sessionStorage.setItem("Finalista2", campeon1);
 
@@ -207,6 +257,24 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
       vida1 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon1} recibe ${daño} de daño,le quedan ${vida1} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra4");
+      barraDeVida.innerHTML = ` <div class="barra4" id="barra4">${vida1}/50</div>`;
+      if (vida1 <= 35 && vida1 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_70");
+        barraDeJugadorUno.classList.remove("barra4");
+      }
+      if (vida1 <= 20 && vida1 > 10) {
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_50");
+        barraDeJugadorUno.classList.remove("barra4_70");
+      }
+      if (vida1 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra4");
+        barraDeJugadorUno.classList.add("barra4_25");
+        barraDeJugadorUno.classList.remove("barra4_50");
+      }
+
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
@@ -214,7 +282,8 @@ function combateRandom2(campeon1, campeon2, vida1, vida2) {
           let cajaABorrar = document.getElementById("container2");
           cajaABorrar.innerHTML = `<div class="container2" id="container2">
       <div class="box3" id="box3"><p> ${campeon2} </p></div>
-      </div>`;
+      </div>
+      <div class="contedorBarra3" id="contenedorBarra3"></div>`;
           rondaFinal += 1;
           sessionStorage.setItem("Finalista2", campeon2);
 
@@ -269,6 +338,23 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       vida2 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon2} recibe ${daño} de daño,le quedan ${vida2} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra3");
+      barraDeVida.innerHTML = ` <div class="barra3" id="barra3">${vida2}/50</div>`;
+      if (vida2 <= 35 && vida2 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_70");
+        barraDeJugadorUno.classList.remove("barra3");
+      }
+      if (vida2 <= 20 && vida2 > 10) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_50");
+        barraDeJugadorUno.classList.remove("barra3_70");
+      }
+      if (vida2 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra3");
+        barraDeJugadorUno.classList.add("barra3_25");
+        barraDeJugadorUno.classList.remove("barra3_50");
+      }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida2 <= 0) {
@@ -295,10 +381,27 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
       vida1 -= daño;
       cajaDeComentarios.innerHTML = `<h3>${campeon1} recibe ${daño} de daño,le quedan ${vida1} de vida</h3>
       <button id="continuar">continuar</button>`;
+      let barraDeVida = document.getElementById("contenedorBarra1");
+      barraDeVida.innerHTML = ` <div class="barra1" id="barra1">${vida1}/50</div>`;
+      if (vida1 <= 35 && vida1 > 20) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_70");
+        barraDeJugadorUno.classList.remove("barra1");
+      }
+      if (vida1 <= 20 && vida1 > 10) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_50");
+        barraDeJugadorUno.classList.remove("barra1_70");
+      }
+      if (vida1 <= 10) {
+        let barraDeJugadorUno = document.querySelector(".barra1");
+        barraDeJugadorUno.classList.add("barra1_25");
+        barraDeJugadorUno.classList.remove("barra1_50");
+      }
       let botonContinuar = document.getElementById("continuar");
       botonContinuar.addEventListener("click", () => {
         if (vida1 <= 0) {
-          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon1} es el campeon del torneo!!</h3>`;
+          cajaDeComentarios.innerHTML = `<h3>${campeon2} ha ganado el combate! ${campeon2} es el campeon del torneo!!</h3>`;
           let cajaABorrar = document.getElementById("containerGeneral");
           cajaABorrar.innerHTML = `
       <div class="boxFinal" id="boxFinal"><p> ${campeon2} Campeon!</p></div>
@@ -309,6 +412,13 @@ function combateRandomFinal(campeon1, campeon2, vida1, vida2) {
         }
       });
     });
+  }
+}
+
+function bajarVida() {
+  if (vida1 > 35) {
+    let barraDeJugadorUno = document.querySelector(".barra1");
+    barraDeJugadorUno.classList.add("barra1_70");
   }
 }
 
